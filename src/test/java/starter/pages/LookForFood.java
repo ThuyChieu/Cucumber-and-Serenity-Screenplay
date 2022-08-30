@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 
-public class LookForInformation {
+public class LookForFood {
     public static Performable homePage() {
         return Task.where("HomePage",
                 Click.on(HomePage.BTN_DOG)
