@@ -25,4 +25,18 @@ public class LookForFood {
                 Click.on(AddToCartPage.BTN_ADD_TO_CART)
                         .then(Click.on(AddToCartPage.BTN_SHOPPING_CART)));
     }
+    public static Performable cartPage(){
+        return Task.where("CartPage",
+                Click.on(CartPage.BTN_CHECK_OUT));
+    }
+    public static Performable checkOutPage(String email, String firstName, String lastName, String address, String apartment, String postalCode, String phone){
+        return Task.where("CheckOutPage",
+                Enter.theValue(email).into(CheckOutPage.TXT_EMAIL)
+                        .then(Enter.theValue(firstName).into(CheckOutPage.TXT_FIRSTNAME)
+                                .then(Enter.theValue(lastName).into(CheckOutPage.TXT_LASTNAME)
+                                        .then(Enter.theValue(address).into(CheckOutPage.TXT_ADDRESS)
+                                                .then(Enter.theValue(apartment).into(CheckOutPage.TXT_APARTMENT)
+                                                        .then(Enter.theValue(postalCode).into(CheckOutPage.TXT_POSTAL_CODE)
+                                                                .then(Enter.theValue(phone).into(CheckOutPage.TXT_PHONE))))))));
+    }
 }

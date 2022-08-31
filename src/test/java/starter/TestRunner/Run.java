@@ -25,6 +25,7 @@ public class Run {
         Chieu.attemptsTo(LookForFood.collectionPage("Bronco Salmon"));
         Chieu.has(LookForFood.searchPage("Bronco Jerky Salmon Dog Treat 70g"));
         Chieu.has(LookForFood.addToCartPage());
-        Assert.assertEquals(CartPage.NAME_PRODUCT_IN_CART,"Bronco Jerky Salmon Dog Treat 70g");
+        Chieu.has(LookForFood.cartPage());
+        Assert.assertEquals(CartPage.NAME_PRODUCT_IN_CART.getName(),"Bronco Jerky Salmon Dog Treat 70g");
     }
 }
