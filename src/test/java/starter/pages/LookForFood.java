@@ -37,6 +37,7 @@ public class LookForFood {
                                         .then(Enter.theValue(address).into(CheckOutPage.TXT_ADDRESS)
                                                 .then(Enter.theValue(apartment).into(CheckOutPage.TXT_APARTMENT)
                                                         .then(Enter.theValue(postalCode).into(CheckOutPage.TXT_POSTAL_CODE)
-                                                                .then(Enter.theValue(phone).into(CheckOutPage.TXT_PHONE))))))));
+                                                                .then(Enter.theValue(phone).into(CheckOutPage.TXT_PHONE)
+                                                                        .then(Click.on(CheckOutPage.BTN_CONTINUE_SHOPPING)))))))));
     }
 }
