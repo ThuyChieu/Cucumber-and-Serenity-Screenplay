@@ -7,7 +7,6 @@ import net.serenitybdd.screenplay.annotations.CastMember;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Title;
-import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
 import starter.navigation.NavigateTo;
@@ -22,7 +21,7 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisi
 
 
 @RunWith(SerenityRunner.class)
-public class Run {
+public class Test {
     @CastMember(name = "User")
     Actor user;
 
@@ -31,7 +30,7 @@ public class Run {
         BrowseTheWeb.as(user).getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
     }
 
-    @Test
+    @org.junit.Test
     @Title("Purchase a package of food")
     public void shoppingCart() {
         user.attemptsTo(
