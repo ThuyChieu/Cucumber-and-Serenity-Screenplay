@@ -8,8 +8,9 @@ import net.serenitybdd.screenplay.actions.Enter;
 public class LookForFood {
     public static Performable homePage() {
         return Task.where("HomePage",
-                Click.on(HomePage.BTN_DOG)
-                        .then(Click.on(HomePage.BTN_FOOD)));
+                Click.on(HomePage.CLOSE_POPUP)
+                .then(Click.on(HomePage.BTN_DOG)
+                .then(Click.on(HomePage.BTN_FOOD))));
     }
     public static Performable collectionPage(String name){
         return Task.where("CollectionPage",
