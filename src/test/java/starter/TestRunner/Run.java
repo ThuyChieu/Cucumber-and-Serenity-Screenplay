@@ -30,5 +30,9 @@ public class Run {
         chieu.has(LookForFood.checkOutPage("chieuthuymaijenny@gmail.com", "Chieu", "Mai", "Danang", "FHome", "520147", "0963779109"));
         chieu.attemptsTo(Ensure.that(CheckOutShipping.CONTACT).hasText("chieuthuymaijenny@gmail.com"));
         chieu.attemptsTo(Ensure.that(CheckOutShipping.SHIP_TO).hasText("Danang" + ", FHome" + ", Singapore " + "520147"));
+
+
+
+
     }
 }
