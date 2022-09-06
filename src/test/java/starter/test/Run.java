@@ -5,16 +5,20 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.annotations.CastMember;
 import net.serenitybdd.screenplay.ensure.Ensure;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Title;
 import org.junit.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
 import starter.navigation.NavigateTo;
+import starter.pages.AddToCartPage;
 import starter.pages.CartPage;
 import starter.pages.CheckOutShippingPage;
 import starter.action.LookForFood;
 
 import java.time.Duration;
+
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 
 @RunWith(SerenityRunner.class)
@@ -36,6 +40,7 @@ public class Run {
                 LookForFood.homePage(),
                 LookForFood.collectionPage("Bronco Salmon"),
                 LookForFood.searchPage("Bronco Jerky Salmon Dog Treat 70g"),
+                WaitUntil.the(AddToCartPage.BTN_ADD_TO_CART,isVisible()).forNoMoreThan(10).seconds(),
                 LookForFood.addToCartPage(),
 
                 //Verify 'product name'
