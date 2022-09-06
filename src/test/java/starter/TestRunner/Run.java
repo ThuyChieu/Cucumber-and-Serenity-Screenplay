@@ -4,10 +4,9 @@ import net.serenitybdd.junit.runners.SerenityRunner;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.annotations.CastMember;
 import net.serenitybdd.screenplay.ensure.Ensure;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import starter.navigation.NavgiateTo;
+import starter.navigation.NavigateTo;
 import starter.pages.CartPage;
 import starter.pages.CheckOutShipping;
 import starter.pages.LookForFood;
@@ -20,7 +19,7 @@ public class Run {
 
     @Test
     public void shoppingCart() {
-        chieu.wasAbleTo(NavgiateTo.thePerromartPage());
+        chieu.wasAbleTo(NavigateTo.thePerromartPage());
         chieu.attemptsTo(LookForFood.homePage());
         chieu.attemptsTo(LookForFood.collectionPage("Bronco Salmon"));
         chieu.has(LookForFood.searchPage("Bronco Jerky Salmon Dog Treat 70g"));
